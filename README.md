@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+README
+Project Overview
 
-## Getting Started
+This project is a responsive client/template dashboard application built with modern full-stack web technologies. It includes secure user authentication, protected dashboard routes, template and client management sections, and production deployment.
 
-First, run the development server:
+**Git Repository Link**
+Repository: https://github.com/ksatyam125/client-template-app
+Live Deployment: https://client-template-app.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Used
+Frontend
+    *Next.js 14 (App Router)
+    *React
+    *TypeScript
+    *Tailwind CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Backend / Authentication
+    *Supabase Authentication
+    *Supabase Database
+    *Server Actions / Route Handlers
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployment
+    *Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Installation & Local Setup**
+1.Clone repository
+    git clone https://github.com/ksatyam125/client-template-app.git
+    cd client-template-app
 
-## Learn More
+2.Install dependencies
+    npm install
 
-To learn more about Next.js, take a look at the following resources:
+3.Create .env.local
+    NEXT_PUBLIC_SUPABASE_URL=...
+    NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+    NEXT_PUBLIC_SITE_URL=http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.Run development server
+    npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Core Features**
+*User Signup
+*User Login
+*Secure Logout
+*Protected Dashboard
+*Template Management Section
+*Client Management Section
+*Mobile Responsive Design
+*Production Deployment via Vercel
 
-## Deploy on Vercel
+**Data Model Walkthrough**
+Authentication
+*Managed by Supabase Auth:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Application Entities**
+Templates
+Clients
+Relationships:-
+One authenticated user can manage multiple templates
+One authenticated user can manage multiple clients
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Architecture Decisions**
+Why Next.js App Router?
+*File-based routing
+*Server components support
+*Easy deployment on Vercel
+*Scalable project structure
+Why Supabase?
+*Fast authentication setup
+*Secure session handling
+*Easy environment variable integration
+*Suitable for startup MVP development
+Why Tailwind CSS?
+*Rapid UI development
+*Responsive design by default
+
+**Improvements With More Time**
+*Better homepage/landing page
+*Password reset flow
+*User role management
+*Improved UI polish and accessibility
