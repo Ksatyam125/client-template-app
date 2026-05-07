@@ -19,11 +19,11 @@ export default async function Dashboard() {
     .eq("user_id", user?.id);
 
   return (
-  <main className="max-w-7xl mx-auto py-12 px-6">
+  <main className="max-w-7xl mx-auto py-12 px-6 sm:px-6 lg:px-8">
     {/* Header */}
     <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-12">
       <div>
-        <h1 className="text-5xl font-bold tracking-tight">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
           Dashboard
         </h1>
         <p className="text-gray-500 mt-2 text-lg">
@@ -31,23 +31,23 @@ export default async function Dashboard() {
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
         <Link
           href="/dashboard/template"
-          className="bg-black text-white px-5 py-3 rounded-lg font-medium hover:opacity-90"
+          className="w-full sm:w-auto bg-black text-white px-5 py-3 rounded-lg font-medium hover:opacity-90"
         >
           + New Template
         </Link>
 
         <Link
           href="/dashboard/client"
-          className="bg-blue-600 text-white px-5 py-3 rounded-lg font-medium hover:bg-blue-700"
+          className="w-full sm:w-auto bg-blue-600 text-white px-5 py-3 rounded-lg font-medium hover:bg-blue-700"
         >
           + New Client
         </Link>
 
-        <form action="/auth/logout" method="post">
-          <button className="bg-gray-200 px-5 py-3 rounded-lg font-medium hover:bg-gray-300">
+        <form action="/auth/logout" method="post" className="w-full sm:w-auto">
+          <button className="w-full sm:w-auto bg-gray-200 px-5 py-3 rounded-lg font-medium hover:bg-gray-300">
             Logout
           </button>
         </form>
