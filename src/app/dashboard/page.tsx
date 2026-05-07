@@ -46,7 +46,7 @@ export default async function Dashboard() {
           + New Client
         </Link>
 
-        <form action="/auth/logout" method="post" className="w-full sm:w-auto">
+        <form action="/auth/signout" method="post" className="w-full sm:w-auto">
           <button className="w-full sm:w-auto bg-gray-200 px-5 py-3 rounded-lg font-medium hover:bg-gray-300">
             Logout
           </button>
